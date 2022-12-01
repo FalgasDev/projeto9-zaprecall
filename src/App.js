@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Footer from "./components/Footer";
 import Logo from "./components/Logo";
@@ -6,12 +7,14 @@ import GlobalSyle from "./global/GlobalSyles";
 import Reset from "./global/reset";
 
 function App() {
+  const [showQuestion, setShowQuestion] = useState(false)
+
 	return (
 		<Container>
       <Reset/>
       <GlobalSyle/>
       <Logo/>
-      <Questions/>
+      <Questions showQuestion={showQuestion} setShowQuestion={setShowQuestion}/>
       <Footer/>
 		</Container>
 	);
