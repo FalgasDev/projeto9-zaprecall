@@ -47,7 +47,7 @@ export default function Card({a, counter, setCounter}) {
   
   return (
     <>
-      <QuestionClosed questionsShowed={questionsShowed} answeredQuestions={answeredQuestions} zap={zap} dontRemember={dontRemember} almostDontRemember={almostDontRemember} a={a}>
+      <QuestionClosed data-test="flashcard" questionsShowed={questionsShowed} answeredQuestions={answeredQuestions} zap={zap} dontRemember={dontRemember} almostDontRemember={almostDontRemember} a={a}>
         <p data-test="flashcard-text">Pergunta {a.id}</p>
         <img data-test="play-btn" onClick={() => showedQuestion(a.id)} src={play} alt="" />
         <img data-test="zap-icon" src={correct} alt=''/>

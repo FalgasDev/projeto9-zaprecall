@@ -5,7 +5,7 @@ import cards from './Deck';
 export default function Questions({counter, setCounter}) {
 	return (
 		<ContainerQuestions>
-			{cards.map(a => <Card data-test="flashcard" a={a} counter={counter} setCounter={setCounter}/>)}
+			{cards.map(a => <Card a={a} counter={counter} setCounter={setCounter}/>)}
 		</ContainerQuestions>
 	);
 }
