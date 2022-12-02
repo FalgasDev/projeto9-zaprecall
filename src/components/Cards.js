@@ -54,11 +54,11 @@ export default function Card({a, counter, setCounter}) {
         <img data-test="partial-icon" src={almost} alt=''/>
         <img data-test="no-icon" src={wrong} alt=''/>
       </QuestionClosed>
-      <QuestionOpen questionsShowed={questionsShowed} answerShowed={answerShowed} a={a}>
+      <QuestionOpen data-test="flashcard" questionsShowed={questionsShowed} answerShowed={answerShowed} a={a}>
         <p data-test="flashcard-text">{a.question}</p>
         <img data-test="turn-btn" onClick={() => showedAnswer(a.id)} src={turn} alt="" />
       </QuestionOpen>
-      <AnswerOpen answerShowed={answerShowed} answeredQuestions={answeredQuestions} a={a}>
+      <AnswerOpen data-test="flashcard" answerShowed={answerShowed} answeredQuestions={answeredQuestions} a={a}>
         <p data-test="flashcard-text">{a.answer}</p>
         <button data-test="partial-btn" onClick={() => answeredQuestionAlmost(a.id)}>Quase não lembrei</button>
         <button data-test="zap-btn" onClick={() => answeredQuestionCorrect(a.id)}>Zap!</button>
