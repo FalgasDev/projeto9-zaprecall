@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import cards from './Deck';
 
-export default function Footer() {
+export default function Footer({counter}) {
   return (
-    <ContainerFooter>
-      <p>0/4 CONCLUÍDOS</p>
+    <ContainerFooter data-test="footer">
+      <p>{counter}/{cards.length} CONCLUÍDOS</p>
     </ContainerFooter>
   )
 }

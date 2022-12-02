@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Footer from "./components/Footer";
 import Logo from "./components/Logo";
@@ -6,13 +7,15 @@ import GlobalSyle from "./global/GlobalSyles";
 import Reset from "./global/reset";
 
 function App() {
+  const [counter, setCounter] = useState(0)
+
   return (
 		<Container>
       <Reset/>
       <GlobalSyle/>
       <Logo/>
-      <Questions/>
-      <Footer/>
+      <Questions counter={counter} setCounter={setCounter}/>
+      <Footer counter={counter}/>
 		</Container>
 	);
 }
