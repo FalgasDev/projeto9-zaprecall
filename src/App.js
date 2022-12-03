@@ -1,21 +1,17 @@
-import { useState } from "react";
 import styled from "styled-components";
-import Footer from "./components/Footer";
-import Logo from "./components/Logo";
-import Questions from "./components/Questions";
+import InitialPage from "./components/InitialPage";
+import MainPage from "./components/MainPage";
 import GlobalSyle from "./global/GlobalSyles";
 import Reset from "./global/reset";
 
 function App() {
-  const [counter, setCounter] = useState(0)
 
   return (
 		<Container>
       <Reset/>
       <GlobalSyle/>
-      <Logo/>
-      <Questions counter={counter} setCounter={setCounter}/>
-      <Footer counter={counter}/>
+      <InitialPage/>
+      <MainPage/>
 		</Container>
 	);
 }
