@@ -9,7 +9,7 @@ export default function InitialPage() {
     <ContainerInitialPage recallStarted={recallStarted}>
       <img src={logo} alt="" />
       <p>ZapRecall</p>
-      <StartButton onClick={() => setRecallStarted(true)}>Iniciar Recall!</StartButton>
+      <StartButton data-test="start-btn" onClick={() => setRecallStarted(true)}>Iniciar Recall!</StartButton>
     </ContainerInitialPage>
   )
 }
