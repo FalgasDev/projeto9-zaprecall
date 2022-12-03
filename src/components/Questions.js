@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import Card from './Cards';
 import cards from './Deck';
 
-export default function Questions({counter, setCounter, footerIcon, setFooterIcon}) {
+export default function Questions({counter, setCounter, footerIcon, setFooterIcon, recallStarted}) {
 	return (
-		<ContainerQuestions>
+		<ContainerQuestions counter={counter} recallStarted={recallStarted}>
 			{cards.map(a => <Card key={a.id} a={a} footerIcon={footerIcon} setFooterIcon={setFooterIcon} counter={counter} setCounter={setCounter}/>)}
 		</ContainerQuestions>
 	);
 }
 
 const ContainerQuestions = styled.div`
-	display: flex;
+	display: ${props => props.recallStarted ? 'flex' : 'none'};
 	flex-direction: column;
-	width: 300px;
-	margin-bottom: 70px;
+	width: 303px;
+	margin-bottom: ${props => props.counter === cards.length ? '171px' : '70px'};
 `;

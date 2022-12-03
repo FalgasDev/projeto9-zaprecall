@@ -93,6 +93,7 @@ const QuestionClosed = styled.div`
   img{
     &:nth-child(2) {
       display: ${props => props.answeredQuestions.includes(props.a.id) ? 'none' : ''};
+      cursor: pointer;
     }
     &:nth-child(3) {
       display: ${props => !props.zap.includes(props.a.id) ? 'none' : ''};
@@ -123,6 +124,7 @@ const QuestionOpen = styled.div`
     margin-left: 15px;
   }
   img {
+    cursor: pointer;
     position: absolute;
     bottom: 10px;
     right: 15px;
@@ -146,6 +148,7 @@ const AnswerOpen = styled.div`
     margin-left: 15px;
   }
   button {
+    cursor: pointer;
     width: 85px;
     height: 37px;
     position: absolute;

@@ -1,10 +1,7 @@
-import { useState } from "react"
 import styled from "styled-components"
 import logo from "../assets/logo.png"
 
-export default function InitialPage() {
-  const [recallStarted, setRecallStarted] = useState(false)
-
+export default function InitialPage({recallStarted, setRecallStarted}) {
   return (
     <ContainerInitialPage recallStarted={recallStarted}>
       <img src={logo} alt="" />
