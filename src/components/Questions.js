@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import Card from './Cards';
 import cards from './Deck';
 
-export default function Questions({counter, setCounter}) {
+export default function Questions({counter, setCounter, footerIcon, setFooterIcon}) {
 	return (
 		<ContainerQuestions>
-			{cards.map(a => <Card key={a.id} a={a} counter={counter} setCounter={setCounter}/>)}
+			{cards.map(a => <Card key={a.id} a={a} footerIcon={footerIcon} setFooterIcon={setFooterIcon} counter={counter} setCounter={setCounter}/>)}
 		</ContainerQuestions>
 	);
 }

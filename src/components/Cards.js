@@ -6,7 +6,7 @@ import correct from '../assets/icone_certo.png'
 import almost from '../assets/icone_quase.png'
 import wrong from '../assets/icone_erro.png'
 
-export default function Card({a, counter, setCounter}) {
+export default function Card({a, counter, setCounter, footerIcon, setFooterIcon}) {
   const [questionsShowed, setQuestionShowed] = useState([])
   const [answerShowed, setAnswerShowed] = useState([])
   const [answeredQuestions, setAnsweredQuestions] = useState([])
@@ -29,6 +29,7 @@ export default function Card({a, counter, setCounter}) {
     setAnsweredQuestions(arrayNew)
     setZap([...zap, req])
     setCounter(counter + 1)
+    setFooterIcon([...footerIcon, correct])
   }
 
   function answeredQuestionAlmost(req) {
@@ -36,6 +37,7 @@ export default function Card({a, counter, setCounter}) {
     setAnsweredQuestions(arrayNew)
     setAlmostDontRemember([...almostDontRemember, req])
     setCounter(counter + 1)
+    setFooterIcon([...footerIcon, almost])
   }
 
   function answeredQuestionWrong(req) {
@@ -43,6 +45,7 @@ export default function Card({a, counter, setCounter}) {
     setAnsweredQuestions(arrayNew)
     setDontRemember([...dontRemember, req])
     setCounter(counter + 1)
+    setFooterIcon([...footerIcon, wrong])
   }
   
   return (

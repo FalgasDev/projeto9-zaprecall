@@ -5,12 +5,13 @@ import Footer from "./Footer";
 
 export default function MainPage() {
   const [counter, setCounter] = useState(0)
+  const [footerIcon, setFooterIcon] = useState([])
 
   return (
     <>
       <Logo/>
-      <Questions counter={counter} setCounter={setCounter}/>
-      <Footer counter={counter}/>
+      <Questions footerIcon={footerIcon} setFooterIcon={setFooterIcon} counter={counter} setCounter={setCounter}/>
+      <Footer footerIcon={footerIcon} counter={counter}/>
     </>
   )
 }
