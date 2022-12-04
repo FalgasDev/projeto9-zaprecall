@@ -20,16 +20,6 @@ export default function Card({
 	const [dontRemember, setDontRemember] = useState([]);
 	const [almostDontRemember, setAlmostDontRemember] = useState([]);
 
-	function showedQuestion(req) {
-		let arrayShowedQuestions = [...questionsShowed, req];
-		setQuestionShowed(arrayShowedQuestions);
-	}
-
-	function showedAnswer(req) {
-		let arrayAnswers = [...answerShowed, req];
-		setAnswerShowed(arrayAnswers);
-	}
-
 	function answeredQuestionCorrect(req) {
 		let correctQuestions = [...answeredQuestions, req];
 		setAnsweredQuestions(correctQuestions);
@@ -68,7 +58,7 @@ export default function Card({
 				<p data-test="flashcard-text">Pergunta {a.id}</p>
 				<img
 					data-test="play-btn"
-					onClick={() => showedQuestion(a.id)}
+					onClick={() => setQuestionShowed([...questionsShowed, a.id])}
 					src={play}
 					alt=""
 				/>
@@ -85,7 +75,7 @@ export default function Card({
 				<p data-test="flashcard-text">{a.question}</p>
 				<img
 					data-test="turn-btn"
-					onClick={() => showedAnswer(a.id)}
+					onClick={() => setAnswerShowed([...answerShowed, a.id])}
 					src={turn}
 					alt=""
 				/>

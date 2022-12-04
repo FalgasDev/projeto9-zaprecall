@@ -11,7 +11,7 @@ const cards = [
 	},
 	{
 		id: 3,
-		question: 'Componentes devem iniciar com __',
+		question: 'Componentes precisam iniciar com __',
 		answer: 'Letra maiúscula',
 	},
 	{ id: 4, question: 'Podemos colocar __ dentro do JSX', answer: 'expressões' },
