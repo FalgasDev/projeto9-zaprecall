@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import play from '../assets/seta_play.png';
 import turn from '../assets/seta_virar.png';
@@ -12,14 +11,19 @@ export default function Card({
 	setCounter,
 	footerIcon,
 	setFooterIcon,
+	questionsShowed,
+	setQuestionShowed,
+	answerShowed,
+	setAnswerShowed,
+	answeredQuestions,
+	setAnsweredQuestions,
+	zap,
+	setZap,
+	dontRemember,
+	setDontRemember,
+	almostDontRemember,
+	setAlmostDontRemember,
 }) {
-	const [questionsShowed, setQuestionShowed] = useState([]);
-	const [answerShowed, setAnswerShowed] = useState([]);
-	const [answeredQuestions, setAnsweredQuestions] = useState([]);
-	const [zap, setZap] = useState([]);
-	const [dontRemember, setDontRemember] = useState([]);
-	const [almostDontRemember, setAlmostDontRemember] = useState([]);
-
 	function answeredQuestionCorrect(req) {
 		let correctQuestions = [...answeredQuestions, req];
 		setAnsweredQuestions(correctQuestions);

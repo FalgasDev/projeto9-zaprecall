@@ -16,7 +16,10 @@ function App() {
 				recallStarted={recallStarted}
 				setRecallStarted={setRecallStarted}
 			/>
-			<MainPage recallStarted={recallStarted} />
+			<MainPage
+				recallStarted={recallStarted}
+				setRecallStarted={setRecallStarted}
+			/>
 		</Container>
 	);
 }

@@ -8,6 +8,18 @@ export default function Questions({
 	footerIcon,
 	setFooterIcon,
 	recallStarted,
+	questionsShowed,
+	setQuestionShowed,
+	answerShowed,
+	setAnswerShowed,
+	answeredQuestions,
+	setAnsweredQuestions,
+	zap,
+	setZap,
+	dontRemember,
+	setDontRemember,
+	almostDontRemember,
+	setAlmostDontRemember,
 }) {
 	return (
 		<ContainerQuestions counter={counter} recallStarted={recallStarted}>
@@ -19,6 +31,18 @@ export default function Questions({
 					setFooterIcon={setFooterIcon}
 					counter={counter}
 					setCounter={setCounter}
+					questionsShowed={questionsShowed}
+					setQuestionShowed={setQuestionShowed}
+					answerShowed={answerShowed}
+					setAnswerShowed={setAnswerShowed}
+					answeredQuestions={answeredQuestions}
+					setAnsweredQuestions={setAnsweredQuestions}
+					zap={zap}
+					setZap={setZap}
+					dontRemember={dontRemember}
+					setDontRemember={setDontRemember}
+					almostDontRemember={almostDontRemember}
+					setAlmostDontRemember={setAlmostDontRemember}
 				/>
 			))}
 		</ContainerQuestions>
@@ -30,5 +54,5 @@ const ContainerQuestions = styled.div`
 	flex-direction: column;
 	width: 303px;
 	margin-bottom: ${(props) =>
-		props.counter === cards.length ? '171px' : '70px'};
+		props.counter === cards.length ? '230px' : '70px'};
 `;
